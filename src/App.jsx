@@ -8,7 +8,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='App p-5 rounded-lg'>
+    <div className='App w-auto bg-black p-5 rounded-lg'>
       <h1>pokemon-dex</h1>
       <div className='Form-field mt-5'>
         <Form />
