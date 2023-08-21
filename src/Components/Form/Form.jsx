@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Card from '../Card/Card';
 
 const Form = () => {
+  const [input,setInput] = useState()
+  
 
-   const searchBtn = (e) => {
+  const inputChange = (e) => {
+    setInput(e.target.value)
+    console.log(e.target.value)
+  }
+
+  const searchBtn = (e) => {
       console.log("click")
-   }
+  }
 
 
   const pokemon = [
@@ -19,7 +26,7 @@ const Form = () => {
   return (
     <div className='Form'>
         <div className="input-container flex justify-between">
-            <input type="text" className="input bg-slate-900 p-2" placeholder='Search'/>
+            <input type="text" className="input bg-slate-900 p-2" placeholder='Search' onChange={inputChange}/>
             <button className="btn" onClick={searchBtn}>Search</button>
         </div>
         <div className='result bg-black mt-5'>
