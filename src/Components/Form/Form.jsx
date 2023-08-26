@@ -4,6 +4,25 @@ import Card from '../Card/Card';
 const Form = () => {
   const [input,setInput] = useState()
   
+  const fetchData = async () => {
+    console.log("fetch")
+    let url = ""            // ENTER POKEAPI URL HERE
+    try{
+      let res = await fetch(url)
+      let data = await res.json()
+      console.log(data)   // name = data.name , image= data.sprites.front_image ect
+      return(data)
+    }catch(err){
+      console.log(err,"Something went wrong")
+    }
+  }
+
+  const renderData = async () => {
+    let data = await fetchData()
+    let content = `<div>${data}</div>`
+    //  INSERT HERE result.html  = content
+  }
+
 
   const inputChange = (e) => {
     setInput(e.target.value)
