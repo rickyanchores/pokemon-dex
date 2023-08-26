@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className='App w-auto bg-black p-5 rounded-lg'>
-      <h1>pokemon-dex</h1>
+      <h1 className='title'>pokemon-dex</h1>
       <div className='Form-field mt-5'>
         <Form />
       </div>
